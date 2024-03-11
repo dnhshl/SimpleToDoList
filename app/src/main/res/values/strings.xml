@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">SimpleToDoList</string>
+
+    <string name="settingsScreenTitle">Einstellungen</string>
+    <string name="detailsScreenTitle">Details</string>
+    <string name="homeScreenTitle">My ToDo List</string>
+
+    <string name="otherScreen1Title">Fullscreen 1</string>
+    <string name="otherScreen2Title">Fullscreen 2</string>
+    <string name="editToDoScreenTitle">Edit ToDo</string>
+
+    <string name="settingsScreenLabel">Config</string>
+    <string name="detailsScreenLabel">Details</string>
+    <string name="homeScreenLabel">Home</string>
+
+    <string name="menuItem1">Item 1</string>
+    <string name="menuItem2">Item 2</string>
+    <string name="menuItem3">Info</string>
+
+    <string name="dismissButton">Abbruch</string>
+    <string name="confirmButton">OK</string>
+
+    <string name="enterTitleLabel">Todo</string>
+    <string name="enterSubjectLabel">Anmerkungen</string>
+
+
+    <string name="deleteLabel">lösche</string>
+    <string name="editLabel">bearbeite</string>
+
+
+
+</resources>
