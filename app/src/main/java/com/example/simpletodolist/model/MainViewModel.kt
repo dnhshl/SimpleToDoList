@@ -46,8 +46,9 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
 
     val toDoList = dataStore.data
         .map { preferences ->
+            // Liste als String aus dem datastore auslesen
             val toDoListAsString = preferences[toDoListKey] ?: "[]"
-            Log.i(">>>datastore", "$toDoListAsString")
+            // dekodieren und als Listendatenstruktur bereitstellen
             Json.decodeFromString<List<ToDoItem>>(toDoListAsString)
         }
 

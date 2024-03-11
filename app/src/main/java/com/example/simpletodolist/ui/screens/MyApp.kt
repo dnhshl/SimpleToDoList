@@ -27,6 +27,8 @@ import androidx.navigation.compose.dialog
 import androidx.navigation.compose.rememberNavController
 import com.example.simpletodolist.model.MainViewModel
 import com.example.simpletodolist.model.ToDoItem
+import com.example.simpletodolist.model.randomSubject
+import com.example.simpletodolist.model.randomTitle
 import com.example.simpletodolist.ui.navigation.MyMenu
 import com.example.simpletodolist.ui.navigation.MyNavBar
 import com.example.simpletodolist.ui.navigation.MyTopBar

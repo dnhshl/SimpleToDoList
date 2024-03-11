@@ -67,14 +67,13 @@ fun HomeScreen(
         verticalArrangement = Arrangement.SpaceBetween,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Log.i(">>>>", "$toDoList")
         LazyColumn(
             modifier = Modifier
                 .padding(horizontal = 16.dp)
                 .fillMaxWidth()
                 .weight(1f)
         ) {
-
+            // Liste befüllen mit den Elementen der unserer ToDo Liste
             items(toDoList) {todo ->
                 ListItemCard(
                     todo = todo,
@@ -88,20 +87,6 @@ fun HomeScreen(
                 )
             }
         }
-/*        Spacer(modifier = Modifier.height(16.dp))
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.SpaceEvenly,
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Button(onClick = {
-                val newToDoItem = ToDoItem(title = randomTitle(), subject = randomSubject())
-                viewModel.addToList(newToDoItem)
-                //viewModel.showSnackbar("$newToDoItem", duration = SnackbarDuration.Indefinite)
-            }) {
-                Text("Add a To Do")
-            }
-        }*/
     }
 }
 

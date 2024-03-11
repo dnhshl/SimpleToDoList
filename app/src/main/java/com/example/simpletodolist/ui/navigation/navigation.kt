@@ -28,7 +28,7 @@ sealed class NavDestination(
     )
 
     object EditToDo : NavDestination(
-        route = "edit_to_do/{id}",
+        route = "edit_to_do",
         title = R.string.editToDoScreenTitle,
         showArrowBack = true,
         content = { navController, viewModel -> EditToDoScreen(navController, viewModel) }

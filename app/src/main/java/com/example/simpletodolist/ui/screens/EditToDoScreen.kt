@@ -40,8 +40,11 @@ fun EditToDoScreen(
     viewModel: MainViewModel,
 ) {
 
+    // currentToDo aus dem ViewModel lesen
     val todo = viewModel.currentToDo
 
+    // State Variablen für die OutlinedTextFields
+    // vorbelegen mit Infos aus currentToDo
     var title by remember { mutableStateOf(todo.title) }
     var subject by remember { mutableStateOf(todo.subject) }
 
@@ -77,19 +80,21 @@ fun EditToDoScreen(
             horizontalArrangement = Arrangement.SpaceEvenly,
             verticalAlignment = Alignment.CenterVertically
         ) {
+            // Dismiss Button; gehe zurück zum HomeScreen ohne irgendeine Änderung
             Button(
                 onClick = { navController.popBackStack() },
-                modifier = Modifier.weight(1f) // Make the button take equal space
+                modifier = Modifier.weight(1f)
             ) {
                 Text(stringResource(id = R.string.dismissButton))
             }
             Spacer(modifier = Modifier.width(16.dp))
+            // Confirm Button; Füge editiertes ToDo der Liste hinzu. Übernimm die ID
             Button(
                 onClick = {
                     viewModel.addToList(ToDoItem(id = todo.id, title = title, subject = subject))
                     navController.popBackStack()
                 },
-                modifier = Modifier.weight(1f) // Make the button take equal space
+                modifier = Modifier.weight(1f)
             ) {
                 Text(stringResource(id = R.string.confirmButton))
             }
