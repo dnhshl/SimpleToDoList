@@ -2,7 +2,6 @@ package com.example.simpletodolist.ui.navigation
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
-import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -22,7 +21,7 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 @Composable
 fun MyTopBar(
     navController: NavController,
-    screens: List<NavDestination>,
+    screens: List<MyNavDestination>,
     onMenuClick: () -> Unit,
 ) {
     val navBackStackEntry by navController.currentBackStackEntryAsState()

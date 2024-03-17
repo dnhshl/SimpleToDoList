@@ -10,7 +10,7 @@ import com.example.simpletodolist.model.MainViewModel
 import com.example.simpletodolist.ui.screens.EditToDoScreen
 import com.example.simpletodolist.ui.screens.HomeScreen
 
-sealed class NavDestination(
+sealed class MyNavDestination(
     val route: String,
     val title: Int = 0,
     val label: Int = 0,
@@ -20,14 +20,14 @@ sealed class NavDestination(
     val showFab: Boolean = false,
     val content: @Composable (NavController, MainViewModel) -> Unit
 ) {
-    object Home : NavDestination(
+    object Home : MyNavDestination(
         route = "home",
         title = R.string.homeScreenTitle,
         showFab = true,
         content = { navController, viewModel -> HomeScreen(navController, viewModel) }
     )
 
-    object EditToDo : NavDestination(
+    object EditToDo : MyNavDestination(
         route = "edit_to_do",
         title = R.string.editToDoScreenTitle,
         showArrowBack = true,
@@ -37,20 +37,20 @@ sealed class NavDestination(
 
 
 // Hier alle Bildschirme listen, über die in der Bottom Bar navigiert werden soll
-val bottomBarNavDestinations = emptyList<NavDestination>()
+val bottomBarNavDestinations = emptyList<MyNavDestination>()
 
 // Hier alle Bildschirme listen, die als FullScreen Bildschirm angesprungen werden sollen
 // wenn es keine gibt, dann
-// val otherDestinations = emptyList<NavDestination>()
+// val otherDestinations = emptyList<MyNavDestination>()
 val otherDestinations = listOf (
-    NavDestination.Home,
-    NavDestination.EditToDo
+    MyNavDestination.Home,
+    MyNavDestination.EditToDo
 )
 
 val navDestinations = bottomBarNavDestinations + otherDestinations
 
 // Hier alle Dialogbilschirme listen
 // wenn es keine gibt, dann
-// val dialogDestinations = emptyList<NavDestination>()
-val dialogDestinations = emptyList<NavDestination>()
+// val dialogDestinations = emptyList<MyNavDestination>()
+val dialogDestinations = emptyList<MyNavDestination>()
 
